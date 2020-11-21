@@ -1,3 +1,9 @@
 # CodeChella_2020_5
 
-123
+Libraries used 
+Turicreate
+Pandas
+NLTK
+TextBlob
+RE
+
