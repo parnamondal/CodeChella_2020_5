@@ -44,7 +44,12 @@ router.get("/getTweets/:SearchParam/:count", async (req, res) => {
     console.log(req.params)
     const tweets = await getTweets(req.params.SearchParam,req.params.count);
     res.send(tweets);
-    fs.writeFile('tweets_data.json', tweets);
-})
+    let data = JSON.stringify(tweets, null, 2);
+
+    fs.writeFile('C:\Users\dhanam\Desktop\tweets_data.json', data, (err) => {
+        if (err) throw err;
+        console.log('Data written to file');
+        });
+    })
 
 module.exports = router;
