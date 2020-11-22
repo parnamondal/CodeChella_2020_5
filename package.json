@@ -21,6 +21,10 @@
   "author": "Dakota Rennemann",
   "license": "MIT",
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "aws-serverless-express": "^3.3.8",
+>>>>>>> 831d6c24571e17c87b716ef634e9d7f71501a934
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.0",
     "dotenv": "^8.2.0",
