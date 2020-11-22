@@ -9,6 +9,7 @@
 const express = require('express');
 const Twitter = require('twitter');
 const router = express.Router(); //eslint-disable-line
+const fs = require('fs');
 
 const AUTH_PARAM = {
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -43,6 +44,7 @@ router.get("/getTweets/:SearchParam/:count", async (req, res) => {
     console.log(req.params)
     const tweets = await getTweets(req.params.SearchParam,req.params.count);
     res.send(tweets);
+    fs.writeFile('tweets_data.json', tweets);
 })
 
 module.exports = router;
